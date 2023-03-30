@@ -15,6 +15,7 @@ class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
 
         int userChoice = sc.nextInt();
@@ -36,12 +37,15 @@ class App {
             username = greetUser();
             System.out.println("What is the result of the expression?");
             winorlose = runGame(userChoice);
+        } else if (userChoice == 4) {
+            username = greetUser();
+            System.out.println("Find the greatest common divisor of given numbers.");
+            winorlose = runGame(userChoice);
         }
 
         while (score < 3 && score > -1) {
             if (winorlose.equals("W")) {
                 score++;
-                winorlose = runGame(userChoice);
             } else {
                 score = -1;
                 System.out.println("Let's try again, " + username + "!");
@@ -49,6 +53,8 @@ class App {
 
             if (score == 3) {
                 System.out.println("Congratulations, " + username + "!");
+            } else if (score > -1 && score < 3) {
+                winorlose = runGame(userChoice);
             }
         }
     }

@@ -1,8 +1,8 @@
 package hexlet.code;
 
 import static hexlet.code.games.Calc.calc;
-import static hexlet.code.games.Cli.greetUser;
 import static hexlet.code.games.Even.evenGame;
+import static hexlet.code.games.Factor.divisor;
 
 public class GameChoice {
     public static String runGame(int choice) {
@@ -11,6 +11,8 @@ public class GameChoice {
             result = evenGame();
         } else if (choice == 3) {
             result = calc();
+        } else if (choice == 4) {
+            result = divisor();
         }
 
         return result;
