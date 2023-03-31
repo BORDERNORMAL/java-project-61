@@ -25,6 +25,7 @@ public class Sequence {
 
         System.out.println(progression);
         int userResult = sc.nextInt();
+        System.out.println("Your answer: " + userResult);
         if (userResult == correctResult) {
             return "W";
         } else {
