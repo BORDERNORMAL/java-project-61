@@ -16,6 +16,7 @@ class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
 
         int userChoice = sc.nextInt();
@@ -40,6 +41,10 @@ class App {
         } else if (userChoice == 4) {
             username = greetUser();
             System.out.println("Find the greatest common divisor of given numbers.");
+            winorlose = runGame(userChoice);
+        } else if (userChoice == 5) {
+            username = greetUser();
+            System.out.println("What number is missing in the progression?");
             winorlose = runGame(userChoice);
         }
 

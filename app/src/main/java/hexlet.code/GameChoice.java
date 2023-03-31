@@ -3,6 +3,7 @@ package hexlet.code;
 import static hexlet.code.games.Calc.calc;
 import static hexlet.code.games.Even.evenGame;
 import static hexlet.code.games.Factor.divisor;
+import static hexlet.code.games.Sequence.progression;
 
 public class GameChoice {
     public static String runGame(int choice) {
@@ -13,6 +14,8 @@ public class GameChoice {
             result = calc();
         } else if (choice == 4) {
             result = divisor();
+        } else if (choice == 5) {
+            result = progression();
         }
 
         return result;
