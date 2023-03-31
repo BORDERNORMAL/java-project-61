@@ -13,7 +13,7 @@ public class Sequence {
 
         String progression = "" + element;
 
-        for (int i = 0; i < elementsNum; i++) {
+        for (int i = 0; i <= elementsNum; i++) {
             element = element + difference;
             if (i == hiddenNum) {
                 correctResult = element;
