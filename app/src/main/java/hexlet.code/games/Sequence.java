@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Sequence {
     public static String progression() {
         Scanner sc = new Scanner(System.in);
-        int difference = (int) (Math.random() * 10);
+        int difference = 1 + (int) (Math.random() * 10);
         int element = (int) (Math.random() * 10 + 5);
         int elementsNum = (int) (Math.random() * 10 + 5);
         int hiddenNum = (int) (Math.random() * 10);
