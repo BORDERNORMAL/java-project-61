@@ -23,10 +23,11 @@ public class Sequence {
             }
         }
 
+        String correctResultStr = Integer.toString(correctResult);
         System.out.println(progression);
-        int userResult = sc.nextInt();
+        String userResult = sc.next();
         System.out.println("Your answer: " + userResult);
-        if (userResult == correctResult) {
+        if (userResult.equals(correctResultStr)) {
             return "W";
         } else {
             System.out.println("'" + userResult + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
