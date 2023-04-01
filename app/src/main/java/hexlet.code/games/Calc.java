@@ -22,7 +22,7 @@ public class Calc {
             correctResult = num1 - num2;
         }
 
-        System.out.println(num1 + operation + num2);
+        System.out.println("Question: " + num1 + operation + num2);
         int userRes = sc.nextInt();
         System.out.println("Your answer: " + userRes);
 
