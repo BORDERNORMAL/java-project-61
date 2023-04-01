@@ -3,6 +3,7 @@ package hexlet.code;
 import static hexlet.code.games.Calc.calc;
 import static hexlet.code.games.Even.evenGame;
 import static hexlet.code.games.Factor.divisor;
+import static hexlet.code.games.Prime.isPrime;
 import static hexlet.code.games.Sequence.progression;
 
 public class GameChoice {
@@ -16,6 +17,8 @@ public class GameChoice {
             result = divisor();
         } else if (choice == 5) {
             result = progression();
+        } else if (choice == 6) {
+            result = isPrime();
         }
 
         return result;

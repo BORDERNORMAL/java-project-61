@@ -17,6 +17,7 @@ class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         int userChoice = sc.nextInt();
@@ -45,6 +46,10 @@ class App {
         } else if (userChoice == 5) {
             username = greetUser();
             System.out.println("What number is missing in the progression?");
+            winorlose = runGame(userChoice);
+        } else if (userChoice == 6) {
+            username = greetUser();
+            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             winorlose = runGame(userChoice);
         }
 
