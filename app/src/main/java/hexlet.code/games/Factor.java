@@ -9,7 +9,7 @@ public class Factor {
 
         int num1 = (int) (Math.random() * 100);
         int num2 = (int) (Math.random() * 100);
-        System.out.println(num1 + " " + num2);
+        System.out.println("Question: " + num1 + " " + num2);
         lesserNum = Math.min(num1, num2);
 
         for (int i = 1; i <= lesserNum; i++) {

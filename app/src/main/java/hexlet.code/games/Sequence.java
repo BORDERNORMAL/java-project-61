@@ -11,7 +11,7 @@ public class Sequence {
         int hiddenNum = (int) (Math.random() * 10);
         int correctResult = 0;
 
-        String progression = "" + element;
+        String progression = "Question: " + element;
 
         for (int i = 0; i <= elementsNum; i++) {
             element = element + difference;
