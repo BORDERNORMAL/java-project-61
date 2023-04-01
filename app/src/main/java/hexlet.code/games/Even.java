@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Even {
     public static String evenGame() {

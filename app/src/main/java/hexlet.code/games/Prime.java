@@ -6,7 +6,7 @@ public class Prime {
     public static String isPrime() {
         Scanner sc = new Scanner(System.in);
 
-        int num = (int)(Math.random() * 100);
+        int num = (int) (Math.random() * 100);
         boolean isPrime = true;
 
         for (int i = 2; i < num; i++) {

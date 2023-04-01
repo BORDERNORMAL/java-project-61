@@ -1,9 +1,7 @@
 package hexlet.code;
 
 import static hexlet.code.GameChoice.runGame;
-import static hexlet.code.games.Calc.calc;
 import static hexlet.code.games.Cli.greetUser;
-import static hexlet.code.games.Even.evenGame;
 
 import java.util.Scanner;
 

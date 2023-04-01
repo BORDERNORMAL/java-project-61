@@ -10,7 +10,7 @@ public class Calc {
         int correctResult;
         int num1 = (int) (Math.random() * 100);
         int num2 = (int) (Math.random() * 10);
-        int operationRes = (int)Math.floor(Math.random() * (3-1) + 1);
+        int operationRes = (int) Math.floor(Math.random() * (3 - 1) + 1);
         if (operationRes == 1) {
             operation = " + ";
             correctResult = num1 + num2;
