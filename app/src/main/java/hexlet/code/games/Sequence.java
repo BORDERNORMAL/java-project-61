@@ -17,7 +17,7 @@ public class Sequence {
             element = element + difference;
             if (i == hiddenNum) {
                 correctResult = element;
-                progression = progression + " ..";
+                progression = progression + "..";
             } else {
                 progression = progression + " " + element;
             }

@@ -1,7 +1,6 @@
 package hexlet.code;
 
-import static hexlet.code.GameChoice.runGame;
-import static hexlet.code.games.Cli.greetUser;
+import hexlet.code.games.Cli;
 
 import java.util.Scanner;
 
@@ -27,28 +26,28 @@ class App {
         String winorlose = "L";
 
         if (userChoice == 1) {
-            greetUser();
+            Cli.greetUser();
             score = -1;
         } else if (userChoice == 2) {
-            username = greetUser();
+            username = Cli.greetUser();
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            winorlose = runGame(userChoice);
+            winorlose = GameChoice.runGame(userChoice);
         } else if (userChoice == 3) {
-            username = greetUser();
+            username = Cli.greetUser();
             System.out.println("What is the result of the expression?");
-            winorlose = runGame(userChoice);
+            winorlose = GameChoice.runGame(userChoice);
         } else if (userChoice == 4) {
-            username = greetUser();
+            username = Cli.greetUser();
             System.out.println("Find the greatest common divisor of given numbers.");
-            winorlose = runGame(userChoice);
+            winorlose = GameChoice.runGame(userChoice);
         } else if (userChoice == 5) {
-            username = greetUser();
+            username = Cli.greetUser();
             System.out.println("What number is missing in the progression?");
-            winorlose = runGame(userChoice);
+            winorlose = GameChoice.runGame(userChoice);
         } else if (userChoice == 6) {
-            username = greetUser();
+            username = Cli.greetUser();
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            winorlose = runGame(userChoice);
+            winorlose = GameChoice.runGame(userChoice);
         }
 
         while (score < 3 && score > -1) {
@@ -62,7 +61,7 @@ class App {
             if (score == 3) {
                 System.out.println("Congratulations, " + username + "!");
             } else if (score > -1 && score < 3) {
-                winorlose = runGame(userChoice);
+                winorlose = GameChoice.runGame(userChoice);
             }
         }
     }
