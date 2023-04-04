@@ -8,11 +8,11 @@ import hexlet.code.games.Sequence;
 
 public class GameChoice {
     public static String runGame(int choice) {
-        int game2 = 2;
-        int game3 = 3;
-        int game4 = 4;
-        int game5 = 5;
-        int game6 = 6;
+        final int game2 = 2;
+        final int game3 = 3;
+        final int game4 = 4;
+        final int game5 = 5;
+        final int game6 = 6;
 
         String result = "";
         if (choice == game2) {

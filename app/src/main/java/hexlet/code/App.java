@@ -25,12 +25,12 @@ class App {
         int score = 0;
         String winorlose = "L";
 
-        int greeting = 1;
-        int game2 = 2;
-        int game3 = 3;
-        int game4 = 4;
-        int game5 = 5;
-        int game6 = 6;
+        final int greeting = 1;
+        final int game2 = 2;
+        final int game3 = 3;
+        final int game4 = 4;
+        final int game5 = 5;
+        final int game6 = 6;
 
         if (userChoice == greeting) {
             Cli.greetUser();
@@ -57,8 +57,8 @@ class App {
             winorlose = GameChoice.runGame(userChoice);
         }
 
-        int winscore = 3;
-        int losescore = -1;
+        final int winscore = 3;
+        final int losescore = -1;
 
         while (score < winscore && score > losescore) {
             if (winorlose.equals("W")) {

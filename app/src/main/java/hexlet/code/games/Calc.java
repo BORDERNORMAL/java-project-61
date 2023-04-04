@@ -6,11 +6,11 @@ public class Calc {
     public static String calc() {
         Scanner sc = new Scanner(System.in);
 
-        int hundredMultiplier = 100;
-        int dozenMultiplier = 10;
-        int plus = 1;
-        int times = 2;
-        int divide = 3;
+        final int hundredMultiplier = 100;
+        final int dozenMultiplier = 10;
+        final int plus = 1;
+        final int times = 2;
+        final int divide = 3;
         String operation;
         int correctResult;
         int num1 = (int) (Math.random() * hundredMultiplier);

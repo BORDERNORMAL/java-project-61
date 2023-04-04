@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Prime {
     public static String isPrime() {
         Scanner sc = new Scanner(System.in);
-        int hundredMultiplier = 100;
+        final int hundredMultiplier = 100;
 
         int num = (int) (Math.random() * hundredMultiplier);
         boolean isPrime = true;

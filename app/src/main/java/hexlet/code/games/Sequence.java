@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Sequence {
     public static String progression() {
         Scanner sc = new Scanner(System.in);
-        int minimumLimit = 5;
-        int dozenMultiplier = 10;
-        int ensureDiffIsNotZero = 1;
+        final int minimumLimit = 5;
+        final int dozenMultiplier = 10;
+        final int ensureDiffIsNotZero = 1;
         int difference = ensureDiffIsNotZero + (int) (Math.random() * dozenMultiplier);
         int element = (int) (Math.random() * dozenMultiplier + minimumLimit);
         int elementsNum = (int) (Math.random() * dozenMultiplier + minimumLimit);

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Even {
     public static String evenGame() {
         Scanner sc = new Scanner(System.in);
-        int thousandMultiplier = 1000;
+        final int thousandMultiplier = 1000;
 
         int number = (int) (Math.random() * thousandMultiplier);
         System.out.println("Question: " + number);
