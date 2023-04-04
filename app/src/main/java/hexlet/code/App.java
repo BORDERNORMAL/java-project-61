@@ -25,42 +25,52 @@ class App {
         int score = 0;
         String winorlose = "L";
 
-        if (userChoice == 1) {
+        int greeting = 1;
+        int game2 = 2;
+        int game3 = 3;
+        int game4 = 4;
+        int game5 = 5;
+        int game6 = 6;
+
+        if (userChoice == greeting) {
             Cli.greetUser();
             score = -1;
-        } else if (userChoice == 2) {
+        } else if (userChoice == game2) {
             username = Cli.greetUser();
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
             winorlose = GameChoice.runGame(userChoice);
-        } else if (userChoice == 3) {
+        } else if (userChoice == game3) {
             username = Cli.greetUser();
             System.out.println("What is the result of the expression?");
             winorlose = GameChoice.runGame(userChoice);
-        } else if (userChoice == 4) {
+        } else if (userChoice == game4) {
             username = Cli.greetUser();
             System.out.println("Find the greatest common divisor of given numbers.");
             winorlose = GameChoice.runGame(userChoice);
-        } else if (userChoice == 5) {
+        } else if (userChoice == game5) {
             username = Cli.greetUser();
             System.out.println("What number is missing in the progression?");
             winorlose = GameChoice.runGame(userChoice);
-        } else if (userChoice == 6) {
+        } else if (userChoice == game6) {
             username = Cli.greetUser();
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             winorlose = GameChoice.runGame(userChoice);
         }
 
-        while (score < 3 && score > -1) {
+        int winscore = 3;
+        int losescore = -1;
+
+        while (score < winscore && score > losescore) {
             if (winorlose.equals("W")) {
                 score++;
             } else {
-                score = -1;
+                score = losescore;
                 System.out.println("Let's try again, " + username + "!");
             }
 
-            if (score == 3) {
+            if (score == winscore) {
                 System.out.println("Congratulations, " + username + "!");
-            } else if (score > -1 && score < 3) {
+            } else if (score > losescore && score < winscore) {
                 winorlose = GameChoice.runGame(userChoice);
             }
         }

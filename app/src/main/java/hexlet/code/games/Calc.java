@@ -6,15 +6,20 @@ public class Calc {
     public static String calc() {
         Scanner sc = new Scanner(System.in);
 
+        int hundredMultiplier = 100;
+        int dozenMultiplier = 10;
+        int plus = 1;
+        int times = 2;
+        int divide = 3;
         String operation;
         int correctResult;
-        int num1 = (int) (Math.random() * 100);
-        int num2 = (int) (Math.random() * 10);
-        int operationRes = (int) Math.floor(Math.random() * (3 - 1) + 1);
-        if (operationRes == 1) {
+        int num1 = (int) (Math.random() * hundredMultiplier);
+        int num2 = (int) (Math.random() * dozenMultiplier);
+        int operationRes = (int) Math.floor(Math.random() * (divide - plus) + plus);
+        if (operationRes == plus) {
             operation = " + ";
             correctResult = num1 + num2;
-        } else if (operationRes == 2) {
+        } else if (operationRes == times) {
             operation = " * ";
             correctResult = num1 * num2;
         } else {

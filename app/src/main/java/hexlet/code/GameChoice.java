@@ -1,19 +1,29 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Factor;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Sequence;
 
 public class GameChoice {
     public static String runGame(int choice) {
+        int game2 = 2;
+        int game3 = 3;
+        int game4 = 4;
+        int game5 = 5;
+        int game6 = 6;
+
         String result = "";
-        if (choice == 2) {
+        if (choice == game2) {
             result = Even.evenGame();
-        } else if (choice == 3) {
+        } else if (choice == game3) {
             result = Calc.calc();
-        } else if (choice == 4) {
+        } else if (choice == game4) {
             result = Factor.divisor();
-        } else if (choice == 5) {
+        } else if (choice == game5) {
             result = Sequence.progression();
-        } else if (choice == 6) {
+        } else if (choice == game6) {
             result = Prime.isPrime();
         }
 

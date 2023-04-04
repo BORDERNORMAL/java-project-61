@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Sequence {
     public static String progression() {
         Scanner sc = new Scanner(System.in);
-        int difference = 1 + (int) (Math.random() * 10);
-        int element = (int) (Math.random() * 10 + 5);
-        int elementsNum = (int) (Math.random() * 10 + 5);
-        int hiddenNum = (int) (Math.random() * 10);
+        int minimumLimit = 5;
+        int dozenMultiplier = 10;
+        int ensureDiffIsNotZero = 1;
+        int difference = ensureDiffIsNotZero + (int) (Math.random() * dozenMultiplier);
+        int element = (int) (Math.random() * dozenMultiplier + minimumLimit);
+        int elementsNum = (int) (Math.random() * dozenMultiplier + minimumLimit);
+        int hiddenNum = (int) (Math.random() * dozenMultiplier);
         int correctResult = 0;
 
         String progression = "Question: " + element;

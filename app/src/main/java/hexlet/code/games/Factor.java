@@ -6,9 +6,10 @@ public class Factor {
     public static String divisor() {
         int lesserNum;
         int correctAnswer = 0;
+        int hundredMultiplier = 100;
 
-        int num1 = (int) (Math.random() * 100);
-        int num2 = (int) (Math.random() * 100);
+        int num1 = (int) (Math.random() * hundredMultiplier);
+        int num2 = (int) (Math.random() * hundredMultiplier);
         System.out.println("Question: " + num1 + " " + num2);
         lesserNum = Math.min(num1, num2);
 
