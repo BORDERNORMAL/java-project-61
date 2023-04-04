@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Factor {
     public static String divisor() {
-        int lesserNum;
+        int biggerNum;
         int correctAnswer = 0;
         final int hundredMultiplier = 100;
 
         int num1 = (int) (Math.random() * hundredMultiplier);
         int num2 = (int) (Math.random() * hundredMultiplier);
         System.out.println("Question: " + num1 + " " + num2);
-        lesserNum = Math.min(num1, num2);
+        biggerNum = Math.max(num1, num2);
 
-        for (int i = 0; i <= lesserNum; i++) {
+        for (int i = 1; i <= biggerNum; i++) {
             if (num1 % i == 0 && num2 % i == 0) {
                 correctAnswer = i;
             }
