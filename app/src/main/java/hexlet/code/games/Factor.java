@@ -13,7 +13,7 @@ public class Factor {
         System.out.println("Question: " + num1 + " " + num2);
         lesserNum = Math.min(num1, num2);
 
-        for (int i = 1; i <= lesserNum; i++) {
+        for (int i = 0; i <= lesserNum; i++) {
             if (num1 % i == 0 && num2 % i == 0) {
                 correctAnswer = i;
             }
