@@ -14,15 +14,16 @@ public class Sequence {
         int hiddenNum = (int) (Math.random() * dozenMultiplier);
         int correctAnswer = 0;
 
-        String progression = "Question: " + element + " ";
+        String progression = "Question: " + element;
 
         for (int i = 0; i <= elementsNum; i++) {
             element = element + difference;
             if (i == hiddenNum) {
                 correctAnswer = element;
-                progression = progression +  ".." + " ";
+                progression = progression + " ";
+                progression = progression +  "..";
             } else {
-                progression = progression + element + " ";
+                progression = progression + " " + element;
             }
         }
 
