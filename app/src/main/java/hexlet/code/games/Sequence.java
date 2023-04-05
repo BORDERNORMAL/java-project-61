@@ -5,35 +5,36 @@ import java.util.Scanner;
 public class Sequence {
     public static String progression() {
         Scanner sc = new Scanner(System.in);
-        final int minimumLimit = 5;
+        final int minNumOfElements = 5;
         final int dozenMultiplier = 10;
-        final int ensureDiffIsNotZero = 1;
-        int difference = ensureDiffIsNotZero + (int) (Math.random() * dozenMultiplier);
-        int element = (int) (Math.random() * dozenMultiplier + minimumLimit);
-        int elementsNum = (int) (Math.random() * dozenMultiplier + minimumLimit);
+        final int minDifference = 1;
+        int difference = minDifference + (int) (Math.random() * dozenMultiplier);
+        int element = (int) (Math.random() * dozenMultiplier + minNumOfElements);
+        int elementsNum = (int) (Math.random() * dozenMultiplier + minNumOfElements);
         int hiddenNum = (int) (Math.random() * dozenMultiplier);
-        int correctResult = 0;
+        int correctAnswer = 0;
 
         String progression = "Question: " + element;
 
         for (int i = 0; i <= elementsNum; i++) {
             element = element + difference;
             if (i == hiddenNum) {
-                correctResult = element;
+                correctAnswer = element;
                 progression = progression +  " ..";
             } else {
                 progression = progression + " " + element;
             }
         }
 
-        String correctResultStr = Integer.toString(correctResult);
+        String correctAnswerStr = Integer.toString(correctAnswer);
         System.out.println(progression);
-        String userResult = sc.next();
-        System.out.println("Your answer: " + userResult);
-        if (userResult.equals(correctResultStr)) {
+        String userAnswer = sc.next();
+        System.out.println("Your answer: " + userAnswer);
+        if (userAnswer.equals(correctAnswerStr)) {
             return "W";
         } else {
-            System.out.println("'" + userResult + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
+            System.out.print("'" + userAnswer + "' is wrong answer ;(.");
+            System.out.println("Correct answer was " + correctAnswerStr + "'.");
             return "L";
         }
     }

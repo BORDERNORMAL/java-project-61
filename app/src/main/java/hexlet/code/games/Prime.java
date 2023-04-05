@@ -9,6 +9,7 @@ public class Prime {
 
         int num = (int) (Math.random() * hundredMultiplier);
         boolean isPrime = true;
+        String correctAnswer = "no";
 
         for (int i = 2; i < num; i++) {
             if (num % i == 0) {
@@ -17,26 +18,21 @@ public class Prime {
             }
         }
 
+        if (isPrime) {
+            correctAnswer = "yes";
+        }
+
         System.out.println("Question: " + num);
 
         String userAnswer = sc.next();
 
         System.out.println("Your answer: " + userAnswer);
 
-        if (isPrime) {
-            if (userAnswer.equals("yes")) {
-                return "W";
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                return "L";
-            }
+        if (userAnswer.equals(correctAnswer)) {
+            return "W";
         } else {
-            if (userAnswer.equals("no")) {
-                return "W";
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'no'.");
-                return "L";
-            }
+            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+            return "L";
         }
     }
 }

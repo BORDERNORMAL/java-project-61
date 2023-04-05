@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Cli;
-
 import java.util.Scanner;
 
 class App {
@@ -23,7 +21,7 @@ class App {
         System.out.println("");
         String username = "";
         int score = 0;
-        String winorlose = "L";
+        String gameOutcome = "L";
 
         final int greeting = 1;
         final int game2 = 2;
@@ -38,40 +36,40 @@ class App {
         } else if (userChoice == game2) {
             username = Cli.greetUser();
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            winorlose = GameChoice.runGame(userChoice);
+            gameOutcome = GameChoice.runGame(userChoice);
         } else if (userChoice == game3) {
             username = Cli.greetUser();
             System.out.println("What is the result of the expression?");
-            winorlose = GameChoice.runGame(userChoice);
+            gameOutcome = GameChoice.runGame(userChoice);
         } else if (userChoice == game4) {
             username = Cli.greetUser();
             System.out.println("Find the greatest common divisor of given numbers.");
-            winorlose = GameChoice.runGame(userChoice);
+            gameOutcome = GameChoice.runGame(userChoice);
         } else if (userChoice == game5) {
             username = Cli.greetUser();
             System.out.println("What number is missing in the progression?");
-            winorlose = GameChoice.runGame(userChoice);
+            gameOutcome = GameChoice.runGame(userChoice);
         } else if (userChoice == game6) {
             username = Cli.greetUser();
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            winorlose = GameChoice.runGame(userChoice);
+            gameOutcome = GameChoice.runGame(userChoice);
         }
 
-        final int winscore = 3;
-        final int losescore = -1;
+        final int scoreToWin = 3;
+        final int scoreToLose = -1;
 
-        while (score < winscore && score > losescore) {
-            if (winorlose.equals("W")) {
+        while (score < scoreToWin && score > scoreToLose) {
+            if (gameOutcome.equals("W")) {
                 score++;
             } else {
-                score = losescore;
+                score = scoreToLose;
                 System.out.println("Let's try again, " + username + "!");
             }
 
-            if (score == winscore) {
+            if (score == scoreToWin) {
                 System.out.println("Congratulations, " + username + "!");
-            } else if (score > losescore && score < winscore) {
-                winorlose = GameChoice.runGame(userChoice);
+            } else if (score > scoreToLose && score < scoreToWin) {
+                gameOutcome = GameChoice.runGame(userChoice);
             }
         }
     }
