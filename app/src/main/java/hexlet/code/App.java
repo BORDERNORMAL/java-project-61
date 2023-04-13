@@ -2,7 +2,21 @@ package hexlet.code;
 
 import java.util.Scanner;
 
+import static hexlet.code.Cli.greetUser;
+import static hexlet.code.Engine.run;
+import static hexlet.code.games.Calc.calc;
+import static hexlet.code.games.Even.evenGame;
+import static hexlet.code.games.GCD.divisor;
+import static hexlet.code.games.Prime.prime;
+import static hexlet.code.games.Sequence.progression;
+
 class App {
+    final static int GREET = 1;
+    final static int EVEN = 2;
+    final static int CALC = 3;
+    final static int GCD = 4;
+    final static int PROGRESSION = 5;
+    final static int PRIME = 6;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -19,58 +33,34 @@ class App {
 
         System.out.println("Your choice: " + userChoice);
         System.out.println("");
-        String username = "";
-        int score = 0;
-        String gameOutcome = "L";
+        String task;
+        String[][] data;
 
-        final int greeting = 1;
-        final int game2 = 2;
-        final int game3 = 3;
-        final int game4 = 4;
-        final int game5 = 5;
-        final int game6 = 6;
 
-        if (userChoice == greeting) {
-            Cli.greetUser();
-            score = -1;
-        } else if (userChoice == game2) {
-            username = Cli.greetUser();
-            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            gameOutcome = GameChoice.runGame(userChoice);
-        } else if (userChoice == game3) {
-            username = Cli.greetUser();
-            System.out.println("What is the result of the expression?");
-            gameOutcome = GameChoice.runGame(userChoice);
-        } else if (userChoice == game4) {
-            username = Cli.greetUser();
-            System.out.println("Find the greatest common divisor of given numbers.");
-            gameOutcome = GameChoice.runGame(userChoice);
-        } else if (userChoice == game5) {
-            username = Cli.greetUser();
-            System.out.println("What number is missing in the progression?");
-            gameOutcome = GameChoice.runGame(userChoice);
-        } else if (userChoice == game6) {
-            username = Cli.greetUser();
-            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            gameOutcome = GameChoice.runGame(userChoice);
-        }
-
-        final int scoreToWin = 3;
-        final int scoreToLose = -1;
-
-        while (score < scoreToWin && score > scoreToLose) {
-            if (gameOutcome.equals("W")) {
-                score++;
-            } else {
-                score = scoreToLose;
-                System.out.println("Let's try again, " + username + "!");
-            }
-
-            if (score == scoreToWin) {
-                System.out.println("Congratulations, " + username + "!");
-            } else if (score > scoreToLose && score < scoreToWin) {
-                gameOutcome = GameChoice.runGame(userChoice);
-            }
+        switch (userChoice) {
+            case GREET: greetUser();
+            break;
+            case EVEN: data = evenGame();
+            task = "Answer 'yes' if the given number is even, otherwise answer 'no'.";
+            run(task, data);
+            break;
+            case CALC: data = calc();
+            task = "What is the result of the expression?";
+            run(task, data);
+            break;
+            case GCD: data = divisor();
+            task = "Find the greatest common divisor of given numbers.";
+            run(task, data);
+            break;
+            case PROGRESSION: data = progression();
+            task = "What number is missing in the progression?";
+            run(task, data);
+            break;
+            case PRIME: data = prime();
+            task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+            run(task, data);
+            break;
+            default: break;
         }
     }
 }

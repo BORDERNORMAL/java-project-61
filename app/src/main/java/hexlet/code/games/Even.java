@@ -1,26 +1,21 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-
 public class Even {
-    public static String evenGame() {
-        Scanner sc = new Scanner(System.in);
-        final int thousandMultiplier = 1000;
+    static final int THOUSAND_MULTIPLIER = 1000;
+    public static String[][] evenGame() {
 
-        int number = (int) (Math.random() * thousandMultiplier);
-        System.out.println("Question: " + number);
-        String correctAnswer = "no";
-        if (number % 2 == 0) {
-            correctAnswer = "yes";
+        String[][] data = new String[3][2];
+
+        for (var round : data) {
+            int number = (int) (Math.random() * THOUSAND_MULTIPLIER);
+            round[0] = "" + number;
+            String correctAnswer = "no";
+            if (number % 2 == 0) {
+                correctAnswer = "yes";
+            }
+            round[1] = correctAnswer;
         }
 
-        String userAnswer = sc.next();
-        System.out.println("Your answer: " + userAnswer);
-
-        if (userAnswer.equals(correctAnswer)) {
-            return "W";
-        }
-        System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-        return "L";
+        return data;
     }
 }

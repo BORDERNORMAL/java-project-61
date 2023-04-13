@@ -1,38 +1,31 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-
 public class Prime {
-    public static String isPrime() {
-        Scanner sc = new Scanner(System.in);
-        final int hundredMultiplier = 100;
 
-        int num = (int) (Math.random() * hundredMultiplier);
-        boolean isPrime = true;
-        String correctAnswer = "no";
+    static final int HUNDRED_MULTIPLIER = 100;
 
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
-                isPrime = false;
-                break;
+    public static String[][] prime() {
+
+        String[][] data = new String[3][2];
+
+        for (var round : data) {
+
+            int num = (int) (Math.random() * HUNDRED_MULTIPLIER);
+            round[0] = "" + num;
+            boolean isPrime = true;
+            String correctAnswer = "yes";
+
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    correctAnswer = "no";
+                    break;
+                }
             }
+
+            round[1] = correctAnswer;
         }
 
-        if (isPrime) {
-            correctAnswer = "yes";
-        }
+        return data;
 
-        System.out.println("Question: " + num);
-
-        String userAnswer = sc.next();
-
-        System.out.println("Your answer: " + userAnswer);
-
-        if (userAnswer.equals(correctAnswer)) {
-            return "W";
-        } else {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-            return "L";
-        }
     }
 }

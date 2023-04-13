@@ -1,40 +1,38 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-
 public class Calc {
-    public static String calc() {
-        Scanner sc = new Scanner(System.in);
 
-        final int hundredMultiplier = 100;
-        final int dozenMultiplier = 10;
-        final int plus = 1;
-        final int times = 2;
-        final int dividedBy = 3;
-        String operation;
-        int correctAnswer;
-        int num1 = (int) (Math.random() * hundredMultiplier);
-        int num2 = (int) (Math.random() * dozenMultiplier);
-        int randomOperation = (int) Math.floor(Math.random() * (dividedBy - plus) + plus);
-        if (randomOperation == plus) {
-            operation = " + ";
-            correctAnswer = num1 + num2;
-        } else if (randomOperation == times) {
-            operation = " * ";
-            correctAnswer = num1 * num2;
-        } else {
-            operation = " - ";
-            correctAnswer = num1 - num2;
+    static final int HUNDRED_MULTIPLIER = 100;
+    static final int DOZEN_MULTIPLIER = 10;
+    static final int PLUS = 1;
+    static final int TIMES = 2;
+    static final int DEDUCTION = 3;
+    public static String[][] calc() {
+
+        String[][] data = new String[3][2];
+
+        for (var round : data) {
+            int num1 = (int) (Math.random() * HUNDRED_MULTIPLIER);
+            int num2 = (int) (Math.random() * DOZEN_MULTIPLIER);
+            int randomOperation = (int) Math.floor(Math.random() * (DEDUCTION - PLUS) + PLUS);
+            int correctAnswer;
+
+            switch (randomOperation) {
+                case PLUS: round[0] = num1 + " + " + num2;
+                correctAnswer = num1 + num2;
+                round[1] = "" + correctAnswer;
+                break;
+                case TIMES: round[0] = num1 + " * " + num2;
+                correctAnswer = num1 * num2;
+                round[1] = "" + correctAnswer;
+                break;
+                case DEDUCTION: round[0] = num1 + " - " + num2;
+                correctAnswer = num1 - num2;
+                round[1] = "" + correctAnswer;
+                break;
+            }
         }
 
-        System.out.println("Question: " + num1 + operation + num2);
-        int userAnswer = sc.nextInt();
-        System.out.println("Your answer: " + userAnswer);
-
-        if (userAnswer == correctAnswer) {
-            return "W";
-        }
-        System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-        return "L";
+        return data;
     }
 }
