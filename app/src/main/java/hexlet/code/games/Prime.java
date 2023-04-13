@@ -16,12 +16,15 @@ public class Prime {
             round[0] = "" + num;
             String correctAnswer = "yes";
 
+
             for (int i = 2; i < num; i++) {
                 if (num % i == 0) {
                     correctAnswer = "no";
                     break;
                 }
             }
+
+            if (num == 1) correctAnswer = "no";
 
             round[1] = correctAnswer;
         }
