@@ -15,7 +15,7 @@ public class Sequence {
             int difference = MINIMAL_DIFFERENCE + (int) (Math.random() * DOZEN_MULTIPLIER);
             int element = (int) (Math.random() * DOZEN_MULTIPLIER);
             int elementsNum = MINIMAL_NUM_OF_ELEMENTS + (int) (Math.random() * DOZEN_MULTIPLIER);
-            int hiddenNumIndex = (int) (Math.random() * DOZEN_MULTIPLIER);
+            int hiddenNumIndex = (int) (Math.random() * elementsNum);
             String progression = "";
 
             for (int i = 0; i <= elementsNum; i++) {
