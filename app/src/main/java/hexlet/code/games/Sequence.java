@@ -5,6 +5,7 @@ public class Sequence {
     static final int MINIMAL_NUM_OF_ELEMENTS = 5;
     static final int DOZEN_MULTIPLIER = 10;
     static final int MINIMAL_DIFFERENCE = 1;
+
     public static String[][] progression() {
 
         String[][] data = new String[3][2];
@@ -15,24 +16,21 @@ public class Sequence {
             int element = (int) (Math.random() * DOZEN_MULTIPLIER);
             int elementsNum = MINIMAL_NUM_OF_ELEMENTS + (int) (Math.random() * DOZEN_MULTIPLIER);
             int hiddenNumIndex = (int) (Math.random() * DOZEN_MULTIPLIER);
-            int correctAnswer = 0;
             String progression = "";
 
             for (int i = 0; i <= elementsNum; i++) {
                 element = element + difference;
                 if (i == hiddenNumIndex) {
                     round[1] = "" + element;
-                    progression = progression +  " ..";
+                    progression = progression + " ..";
                 } else {
                     progression = progression + " " + element;
                 }
             }
 
             round[0] = progression;
-
         }
 
         return data;
-
     }
 }
