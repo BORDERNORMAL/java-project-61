@@ -26,7 +26,11 @@ public class Sequence {
 
                 if (i == hiddenNumIndex) {
                     round[1] = "" + element;
-                    progression = progression + " ..";
+                    if (i == 0) {
+                        progression = progression + "..";
+                    } else {
+                        progression = progression + " ..";
+                    }
                 } else {
                     if (i == 0) {
                         progression = "" + element;
