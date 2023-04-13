@@ -19,7 +19,9 @@ public class Sequence {
             String progression = "";
 
             for (int i = 0; i <= elementsNum; i++) {
+
                 element = element + difference;
+
                 if (i == hiddenNumIndex) {
                     round[1] = "" + element;
                     progression = progression + " ..";
@@ -30,6 +32,7 @@ public class Sequence {
                         progression = progression + " " + element;
                     }
                 }
+
             }
 
             round[0] = progression;
