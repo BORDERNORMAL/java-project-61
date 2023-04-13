@@ -5,10 +5,12 @@ public class Sequence {
     static final int MINIMAL_NUM_OF_ELEMENTS = 5;
     static final int DOZEN_MULTIPLIER = 10;
     static final int MINIMAL_DIFFERENCE = 1;
+    static final int ROUNDS = 3;
+    static final int Q_AND_A = 2;
 
     public static String[][] progression() {
 
-        String[][] data = new String[3][2];
+        String[][] data = new String[ROUNDS][Q_AND_A];
 
         for (var round : data) {
 

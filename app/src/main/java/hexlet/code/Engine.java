@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+
+    static final int SCORE_TO_WIN = 3;
     public static void run(String task, String[][] data) {
 
         Scanner sc = new Scanner(System.in);
@@ -29,7 +31,7 @@ public class Engine {
             }
         }
 
-        if (score == 3) {
+        if (score == SCORE_TO_WIN) {
             System.out.println("Congratulations, " + username + "!");
         }
     }

@@ -7,9 +7,11 @@ public class Calc {
     static final int PLUS = 1;
     static final int MULTIPLICATION = 2;
     static final int DEDUCTION = 3;
+    static final int ROUNDS = 3;
+    static final int Q_AND_A = 2;
     public static String[][] calc() {
 
-        String[][] data = new String[3][2];
+        String[][] data = new String[ROUNDS][Q_AND_A];
 
         for (var round : data) {
             int num1 = (int) (Math.random() * HUNDRED_MULTIPLIER);

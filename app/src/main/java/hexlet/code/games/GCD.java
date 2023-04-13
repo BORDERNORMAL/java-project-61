@@ -5,10 +5,12 @@ package hexlet.code.games;
 public class GCD {
 
     static final int HUNDRED_MULTIPLIER = 100;
+    static final int ROUNDS = 3;
+    static final int Q_AND_A = 2;
 
     public static String[][] divisor() {
 
-        String[][] data = new String[3][2];
+        String[][] data = new String[ROUNDS][Q_AND_A];
         String correctAnswer = "";
 
         for (var round : data) {
