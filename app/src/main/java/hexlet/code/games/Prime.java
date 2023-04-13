@@ -24,7 +24,9 @@ public class Prime {
                 }
             }
 
-            if (num == 1) correctAnswer = "no";
+            if (num == 1) {
+                correctAnswer = "no";
+            }
 
             round[1] = correctAnswer;
         }
