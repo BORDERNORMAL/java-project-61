@@ -24,7 +24,7 @@ public class Sequence {
                     round[1] = "" + element;
                     progression = progression + " ..";
                 } else {
-                    if (i = 0) {
+                    if (i == 0) {
                         progression = "" + element;
                     } else {
                         progression = progression + " " + element;
