@@ -39,6 +39,9 @@ public class Calc {
                     correctAnswer = num1 - num2;
                     round[1] = String.valueOf(correctAnswer);
                     break;
+
+                default:
+                    break;
             }
         }
 
