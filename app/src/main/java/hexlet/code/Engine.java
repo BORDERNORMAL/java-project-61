@@ -24,6 +24,7 @@ public class Engine {
             System.out.println("Your answer: " + userAnswer);
             if (userAnswer.equals(round[1])) {
                 score++;
+                System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' was wrong answer ;(. Correct answer was '" + round[1] + "'.");
                 System.out.println("Let's try again, " + username + "!");

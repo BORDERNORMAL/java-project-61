@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
-public class Sequence {
+import static hexlet.code.Engine.run;
+
+public class Progression {
 
     static final int MINIMAL_NUM_OF_ELEMENTS = 5;
     static final int DOZEN_MULTIPLIER = 10;
@@ -8,7 +10,7 @@ public class Sequence {
     static final int ROUNDS = 3;
     static final int Q_AND_A = 2;
 
-    public static String[][] progression() {
+    public static void progression() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];
 
@@ -17,7 +19,7 @@ public class Sequence {
             int difference = MINIMAL_DIFFERENCE + (int) (Math.random() * DOZEN_MULTIPLIER);
             int element = (int) (Math.random() * DOZEN_MULTIPLIER);
             int elementsNum = MINIMAL_NUM_OF_ELEMENTS + (int) (Math.random() * DOZEN_MULTIPLIER);
-            int hiddenNumIndex = (int) (Math.random() * elementsNum);
+            int hiddenNumIndex = (int) Math.floor(Math.random() * (elementsNum - 1) + 1);
             String progression = "";
 
             for (int i = 0; i <= elementsNum; i++) {
@@ -44,6 +46,7 @@ public class Sequence {
             round[0] = progression;
         }
 
-        return data;
+        String task = "What number is missing in the progression?";
+        run(task, data);
     }
 }
