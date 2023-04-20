@@ -5,9 +5,9 @@ import static hexlet.code.Engine.run;
 
 public class GCD {
 
-    static final int HUNDRED_MULTIPLIER = 100;
-    static final int ROUNDS = 3;
-    static final int Q_AND_A = 2;
+    private static final int HUNDRED_MULTIPLIER = 100;
+    private static final int ROUNDS = 3;
+    private static final int Q_AND_A = 2;
 
     public static void divisor() {
 

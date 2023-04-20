@@ -4,13 +4,13 @@ import static hexlet.code.Engine.run;
 
 public class Calc {
 
-    static final int HUNDRED_MULTIPLIER = 100;
-    static final int DOZEN_MULTIPLIER = 10;
-    static final int PLUS = 1;
-    static final int MULTIPLICATION = 2;
-    static final int DEDUCTION = 3;
-    static final int ROUNDS = 3;
-    static final int Q_AND_A = 2;
+    private static final int HUNDRED_MULTIPLIER = 100;
+    private static final int DOZEN_MULTIPLIER = 10;
+    private static final int PLUS = 1;
+    private static final int MULTIPLICATION = 2;
+    private static final int DEDUCTION = 3;
+    private static final int ROUNDS = 3;
+    private static final int Q_AND_A = 2;
     public static void calc() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];

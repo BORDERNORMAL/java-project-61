@@ -3,9 +3,9 @@ package hexlet.code.games;
 import static hexlet.code.Engine.run;
 
 public class Even {
-    static final int THOUSAND_MULTIPLIER = 1000;
-    static final int ROUNDS = 3;
-    static final int Q_AND_A = 2;
+    private static final int THOUSAND_MULTIPLIER = 1000;
+    private static final int ROUNDS = 3;
+    private static final int Q_AND_A = 2;
     public static void evenGame() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];

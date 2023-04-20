@@ -4,11 +4,11 @@ import static hexlet.code.Engine.run;
 
 public class Progression {
 
-    static final int MINIMAL_NUM_OF_ELEMENTS = 5;
-    static final int DOZEN_MULTIPLIER = 10;
-    static final int MINIMAL_DIFFERENCE = 1;
-    static final int ROUNDS = 3;
-    static final int Q_AND_A = 2;
+    private static final int MINIMAL_NUM_OF_ELEMENTS = 5;
+    private static final int DOZEN_MULTIPLIER = 10;
+    private static final int MINIMAL_DIFFERENCE = 1;
+    private static final int ROUNDS = 3;
+    private static final int Q_AND_A = 2;
 
     public static void progression() {
 

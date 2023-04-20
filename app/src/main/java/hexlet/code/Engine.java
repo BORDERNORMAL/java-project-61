@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static final int SCORE_TO_WIN = 3;
+    private static final int SCORE_TO_WIN = 3;
     public static void run(String task, String[][] data) {
 
         Scanner sc = new Scanner(System.in);

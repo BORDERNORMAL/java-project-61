@@ -10,12 +10,12 @@ import static hexlet.code.games.Prime.prime;
 import static hexlet.code.games.Progression.progression;
 
 class App {
-    static final int GREET = 1;
-    static final int EVEN = 2;
-    static final int CALC = 3;
-    static final int GCD = 4;
-    static final int PROGRESSION = 5;
-    static final int PRIME = 6;
+    private static final int GREET = 1;
+    private static final int EVEN = 2;
+    private static final int CALC = 3;
+    private static final int GCD = 4;
+    private static final int PROGRESSION = 5;
+    private static final int PRIME = 6;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
