@@ -41,6 +41,8 @@ public class Calc {
                     break;
 
                 default:
+                    System.out.println("A viable operation couldn't be generated");
+                    System.exit(1);
                     break;
             }
         }

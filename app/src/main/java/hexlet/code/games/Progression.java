@@ -20,30 +20,23 @@ public class Progression {
             int element = (int) (Math.random() * DOZEN_MULTIPLIER);
             int elementsNum = MINIMAL_NUM_OF_ELEMENTS + (int) (Math.random() * DOZEN_MULTIPLIER);
             int hiddenNumIndex = (int) Math.floor(Math.random() * (elementsNum - 1) + 1);
-            String progression = "";
+            StringBuilder sb = new StringBuilder();
 
             for (int i = 0; i <= elementsNum; i++) {
 
                 element = element + difference;
 
                 if (i == hiddenNumIndex) {
-                    round[1] = "" + element;
-                    if (i == 0) {
-                        progression = progression + "..";
-                    } else {
-                        progression = progression + " ..";
-                    }
+                    round[1] = String.valueOf(element);
+                    sb.append(".. ");
                 } else {
-                    if (i == 0) {
-                        progression = "" + element;
-                    } else {
-                        progression = progression + " " + element;
-                    }
+                    sb.append(element);
+                    sb.append(" ");
                 }
 
             }
 
-            round[0] = progression;
+            round[0] = String.valueOf(sb).trim();
         }
 
         String task = "What number is missing in the progression?";
