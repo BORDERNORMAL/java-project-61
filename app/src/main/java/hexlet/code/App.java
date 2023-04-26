@@ -3,11 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 import static hexlet.code.Cli.greetUser;
-import static hexlet.code.games.Calc.calc;
-import static hexlet.code.games.Even.evenGame;
-import static hexlet.code.games.GCD.divisor;
-import static hexlet.code.games.Prime.prime;
-import static hexlet.code.games.Progression.progression;
+import static hexlet.code.games.Calc.runCalc;
+import static hexlet.code.games.Even.runEven;
+import static hexlet.code.games.GCD.runGCD;
+import static hexlet.code.games.Prime.runPrime;
+import static hexlet.code.games.Progression.runProgression;
 
 class App {
     private static final int GREET = 1;
@@ -39,23 +39,23 @@ class App {
                 break;
 
             case EVEN:
-                evenGame();
+                runEven();
                 break;
 
             case CALC:
-                calc();
+                runCalc();
                 break;
 
             case GCD:
-                divisor();
+                runGCD();
                 break;
 
             case PROGRESSION:
-                progression();
+                runProgression();
                 break;
 
             case PRIME:
-                prime();
+                runPrime();
                 break;
 
             default:

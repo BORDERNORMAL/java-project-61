@@ -9,8 +9,9 @@ public class Progression {
     private static final int MINIMAL_DIFFERENCE = 1;
     private static final int ROUNDS = 3;
     private static final int Q_AND_A = 2;
+    private static final String TASK = "What number is missing in the progression?";
 
-    public static void progression() {
+    public static void runProgression() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];
 
@@ -39,7 +40,6 @@ public class Progression {
             round[0] = String.valueOf(sb).trim();
         }
 
-        String task = "What number is missing in the progression?";
-        run(task, data);
+        run(TASK, data);
     }
 }

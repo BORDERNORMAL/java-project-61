@@ -8,8 +8,9 @@ public class GCD {
     private static final int HUNDRED_MULTIPLIER = 100;
     private static final int ROUNDS = 3;
     private static final int Q_AND_A = 2;
+    private static final String TASK = "Find the greatest common divisor of given numbers.";
 
-    public static void divisor() {
+    public static void runGCD() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];
         String correctAnswer;
@@ -18,23 +19,20 @@ public class GCD {
             int num1 = (int) (Math.random() * HUNDRED_MULTIPLIER);
             int num2 = (int) (Math.random() * HUNDRED_MULTIPLIER);
 
-            correctAnswer = findGCD(num1, num2);
-
             round[0] = num1 + " " + num2;
-            round[1] = correctAnswer;
+            round[1] = String.valueOf(findGCD(num1, num2));
         }
 
-        String task = "Find the greatest common divisor of given numbers.";
-        run(task, data);
+        run(TASK, data);
     }
 
-    public static String findGCD(int a, int b) {
-        String gcd = "0";
+    public static int findGCD(int a, int b) {
+        int gcd = 0;
 
         int biggerNum = Math.max(a, b);
         for (int i = biggerNum; i > 0; i--) {
             if (a % i == 0 && b % i == 0) {
-                gcd = String.valueOf(i);
+                gcd = i;
                 break;
             }
         }

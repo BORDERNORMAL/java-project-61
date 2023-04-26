@@ -6,7 +6,8 @@ public class Even {
     private static final int THOUSAND_MULTIPLIER = 1000;
     private static final int ROUNDS = 3;
     private static final int Q_AND_A = 2;
-    public static void evenGame() {
+    private static final String TASK = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static void runEven() {
 
         String[][] data = new String[ROUNDS][Q_AND_A];
         String correctAnswer;
@@ -14,12 +15,10 @@ public class Even {
         for (var round : data) {
             int number = (int) (Math.random() * THOUSAND_MULTIPLIER);
             round[0] = String.valueOf(number);
-            correctAnswer = isEven(number) ? "yes" : "no";
-            round[1] = correctAnswer;
+            round[1] = isEven(number) ? "yes" : "no";
         }
 
-        String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        run(task, data);
+        run(TASK, data);
     }
 
     public static boolean isEven(int number) {
